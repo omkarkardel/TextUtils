@@ -1,0 +1,18 @@
+
+
+//  To add your repo to github first time
+git init
+git add .  or git add filename
+git commit -m "Initial commit"
+git remote add origin https://github.com/USERNAME/REPO_NAME.git
+//To check
+git remote -v
+// To push first time
+git branch -M main
+git push -u origin main
+
+// To Update your small project 
+git status
+git add .  or git add filename
+git commit -m "Your commit"
+git push
