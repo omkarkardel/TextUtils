@@ -17,15 +17,21 @@ export default function TextForm(props) {
     const handleClear = () => {
          let newText = '';
          setText(newText);
+         props.showAlert("Text Cleared", "success");
+
     }
     const handleCopy = () => {
       let text = document.getElementById("mybox");
       text.select();
       navigator.clipboard.writeText(text.value);
+      props.showAlert("Text Copy", "success");
+
     }
     const RemoveExtraSpace = () => {
       let newText = text.split(/[ ]+/);
       setText(newText.join(" "));
+      props.showAlert("Extra Space Removed", "success");
+
     }
 
     const handleOnChange = (event) => {
