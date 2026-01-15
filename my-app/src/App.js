@@ -5,24 +5,6 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from './components/Alert';
 
-// import{createBrowserRouter, RouterProvider} from "react-router-dom";
-
-// const router = createBrowserRouter (
-//   [
-//     {
-//       path:"/",
-//       element: <Navbar/>
-//     },
-//     // {
-//     //   path:"/about",
-//     //   element: <About/>
-//     // },
-//     { 
-//       path:"/textform",
-//       element: <TextForm/>
-//     },
-//   ]
-// )
 
 function App() {
   const[mode, setMode] = useState('light'); //whether dark mode is enabled or not
@@ -38,7 +20,8 @@ function App() {
      }, 1500);
   }
 
-  const toggleMode = () => {
+  const toggleMode = (cls) => {
+    console.log(cls);
     if(mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#2b4a9ad1';
@@ -61,7 +44,7 @@ function App() {
       <Alert alert={alert}/>
       <div className="container my-3">
         <TextForm heading="Enter text to analyze below" showAlert={showAlert} />
-      <About/>
+      <About mode={mode}/>
       </div>
     </>
   );

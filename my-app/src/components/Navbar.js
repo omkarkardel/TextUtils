@@ -34,22 +34,29 @@ export default function Navbar(props) {
                   {props.aboutText}
                 </a>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <a className="nav-link disabled" aria-disabled="true">
                   About
                 </a>
-              </li> */}
+              </li>
             </ul>
+            <div className="d-flex">
+              <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleMode('primary')}} style={{height: '30px', width: '30px', cursor:"pointer"}}></div>
+              <div className="bg-danger rounded mx-2" onClick={()=>{props.toggleMode('primary')}} style={{height: '30px', width: '30px', cursor:"pointer"}}></div>
+              <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleMode('primary')}} style={{height: '30px', width: '30px', cursor:"pointer"}}></div>
+              <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleMode('primary')}} style={{height: '30px', width: '30px', cursor:"pointer"}}></div>
+              
+            </div>
             {/* <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
-              /> */}
-            {/* <button className="btn btn-danger" type="submit">
+              />  */}
+            {/* { <button className="btn btn-danger" type="submit">
                 Search
-              </button> */}
+              </button>} */}
             {/* </form> */}
             <div className={`form-check form-switch text-${props.mode==='light' ? 'dark':'light'}`}>
               <input
@@ -59,7 +66,7 @@ export default function Navbar(props) {
                 role="switch"
                 id="switchCheckDefault"
               />
-              <label className="form-check-label" >Enable Dark Mode</label>
+              <label className="form-check-label" >Toggle Mode</label>
             </div>
           </div>
         </div>
